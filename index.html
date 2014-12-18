@@ -1,0 +1,61 @@
+<!Doctype Html>
+<html>
+	<head>
+		<title>Frontend Knockout - Address Book</title>
+		<!--Css files-->
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css.map">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css.map">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<!--End Css files-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2"></div><!--col-md-3-->
+				<div class="col-md-8">
+					<h2>Contacts</h2>
+					<div id='contactsList'>
+					<table class="table table-bordered">
+						<tr>
+							<th>First name</th>
+							<th>Last name</th>
+							<th>Phone numbers</th>
+						</tr>
+						<tbody data-bind="foreach: contacts">
+							<tr>
+								<td>
+									<input data-bind='value: firstName' />
+									<div><a href='#' data-bind='click: $root.removeContact'>Delete</a></div>
+								</td>
+								<td><input data-bind='value: lastName' /></td>
+								<td>
+									<table>
+										<tbody data-bind="foreach: phones">
+											<tr>
+												<td><input data-bind='value: type' /></td>
+												<td><input data-bind='value: number' /></td>
+												<td><a href='#' data-bind='click: $root.removePhone'>Delete</a></td>
+											</tr>
+										</tbody>
+									</table>
+									<a href='#' data-bind='click: $root.addPhone'>Add number</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div><!--col-md-6-->
+				<div class="col-md-2"></div><!--col-md-3-->
+			</div><!--row-->
+		</div><!--container-->
+
+		<!--Javascript files-->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-3.2.0.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/npm.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<!--End Javascript files-->
+	</body>
+</html>
