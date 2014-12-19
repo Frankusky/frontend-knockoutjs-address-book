@@ -19,7 +19,7 @@
 					<div id='contactsList'>
 					<table class="table table-bordered">
 						<tr>
-							<th>First name</th>
+							<th>I like momma</th>
 							<th>Last name</th>
 							<th>Phone numbers</th>
 						</tr>
@@ -45,6 +45,12 @@
 							</tr>
 						</tbody>
 					</table>
+					<p>
+						<button data-bind='click: addContact'>Add a contact</button>
+						<button data-bind='click: save, enable: contacts().length > 0'>Save to JSON</button>
+					</p>
+ 
+<textarea data-bind='value: lastSavedJson' rows='5' cols='60' disabled='disabled'> </textarea>
 				</div><!--col-md-6-->
 				<div class="col-md-2"></div><!--col-md-3-->
 			</div><!--row-->

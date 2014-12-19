@@ -1,0 +1,22 @@
+Q: What did you learn in this lesson?
+A: When use 'new' to initialize a function of knockout, how to access to a data
+
+Q: How did you use Knockout.JS?
+A: There are a lot of functions, the first function takes the data that it is already declared, the second let you add a new field for a new user, the third let you add telephone number and a name that identifies the telephone, the fourth function deletes a number and his name, and the last one converts all the data into a json.
+
+Q: Explain how and why you solved the user stories with technical details.
+A: 
+	User story 1: As a user, I must be able to view my contact list, with first and last name, and phone numbers.
+	First in the Html set an element that will have a data-bind that will go over all the data that a function will return. Then in js I make a function that takes an object and take the firstName, lastName and phone values.
+
+	User story 2: As a user, I must be able to add a new contact with all his information.
+	In Html, I set a button element that calls a function in JS. Once it is clicked, the function add two keys: "firstName" and "lastName". Since before there is a data-bind that creates a new input for each key in the object, it will find that there are new values in the object and will create the input fields.
+
+	User story 3: As a user I must be able to delete contacts from my address book.
+	I have set a text that it is clickeable that calls a function that finds which data have to delete.
+
+	User story 4: As a user I must be able to add and remove phone numbers to any individual contact.
+	I have set a text that it is clickeable that calls a function that adds two inputs ("type" and "number") for each user.
+
+	User story 5: As a backend developer, I must receive all the address book contacts as a JSON so I can store it in a database.
+	There is a function in knockout that converts an object into a json (ko.toJS)
